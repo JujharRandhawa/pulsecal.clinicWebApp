@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 16, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/Documents/middleware.ts"],"sourcesContent":["import { systemMonitor } from \"./lib/system-monitor\";\nsystemMonitor.startMonitoring(); "],"names":[],"mappings":";;;;;;;AACA,cAAc,eAAe"}}]
+}

@@ -1,0 +1,2224 @@
+[00:00:02.772] Server  ERROR    ⨯ ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:02.773] Server  ERROR    ⨯ ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:02.790] Server  LOG     
+[00:00:02.790] Server  LOG        We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+[00:00:02.790] Server  LOG        The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+[00:00:02.790] Server  LOG        	- include was updated to add '.next/dev/types/**/*.ts'
+[00:00:02.790] Server  LOG     
+[00:00:02.790] Server  LOG        The following mandatory changes were made to your tsconfig.json:
+
+[00:00:02.791] Server  LOG        	- jsx was set to react-jsx (next.js uses the React automatic runtime)
+[00:00:02.791] Server  LOG     
+[00:00:02.928] Server  LOG      ✓ Ready in 2.7s
+[00:02:04.386] Server  ERROR    ⨯ ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+
+
+./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+
+
+./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+
+
+./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+
+
+./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+
+
+./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+
+
+./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+
+
+./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+
+
+./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+
+
+./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+
+
+./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+
+[00:02:05.049] Browser ERROR   uncaughtError: Error: ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+
+[00:02:05.410] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:02:05.410] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:02:05.410] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:02:05.410] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:02:05.410] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:02:05.410] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:02:05.410] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:02:05.410] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:02:05.410] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:02:05.410] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:02:05.410] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:02:05.410] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:02:05.410] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:02:05.410] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:02:05.410] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:02:05.410] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:02:05.410] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:05.628] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:02:05.628] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:02:05.628] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:02:05.628] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:02:05.628] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:02:05.628] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:02:05.628] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:02:05.628] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:02:05.628] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:02:05.628] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:02:05.628] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:02:05.628] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:02:05.628] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:02:05.628] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:02:05.628] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:02:05.628] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:02:05.628] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:05.840] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:02:05.840] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:05.840] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:02:05.840] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:02:05.840] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:02:05.840] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:02:05.840] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:02:05.840] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:02:05.840] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:02:05.840] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:02:05.840] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:02:05.840] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:02:05.840] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:02:05.840] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:02:05.840] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:02:05.840] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:02:05.840] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:02:10.025] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:02:10.025] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:02:10.025] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:02:10.025] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:02:10.025] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:02:10.025] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:02:10.025] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:02:10.025] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:02:10.025] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:02:10.025] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:02:10.025] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:02:10.025] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:02:10.025] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:02:10.025] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:02:10.025] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:02:10.025] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:02:10.025] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:05:58.443] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:05:58.444] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:05:58.444] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:05:58.444] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:05:58.444] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:05:58.444] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:05:58.444] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:05:58.444] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:05:58.445] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:05:58.445] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:05:58.445] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:05:58.445] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:05:58.445] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:05:58.445] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:05:58.445] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:05:58.445] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:05:58.445] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:05:58.445] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:05:58.445] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:05:58.445] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:05:58.445] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:05:58.445] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:05:58.445] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:05:58.445] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:05:58.445] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:05:59.382] Server  ERROR    ⨯ ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+
+
+./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+
+
+./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+
+
+./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+
+
+./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+
+
+./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+
+
+./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+
+
+./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+
+
+./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+
+
+./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+
+
+./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+
+[00:05:59.514] Browser ERROR   uncaughtError: Error: ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+
+[00:05:59.675] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:05:59.675] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:05:59.675] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:05:59.675] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:05:59.675] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:07:00.844] Server  ERROR    ⨯ ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:07:00.847] Server  ERROR    ⨯ ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:07:04.264] Server  ERROR    ⨯ ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:07:04.265] Server  ERROR    ⨯ ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:07:07.076] Server  ERROR    ⨯ ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:07:07.076] Server  ERROR    ⨯ ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:07:07.150] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:07:07.150] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/cancel and /appointments.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:07:07.150] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:07:07.150] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/cancel and /appointments.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:07:07.150] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:07:07.150] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:07:07.150] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:07:07.166] Server  ERROR    ⨯ ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/cancel and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/chat and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/checkin and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+
+
+./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+
+
+./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+
+
+./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+
+
+./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+
+
+./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+
+
+./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+
+
+./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+
+
+./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+
+
+./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+
+
+./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/cancel and /appointments.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/chat and /appointments.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:07:07.191] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:07:07.191] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/cancel and /appointments.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/chat and /appointments.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:07:07.191] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:07:07.191] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:07:07.191] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:07:07.191] Browser LOG     Failed to fetch devPagesManifest {}
+[00:07:07.191] Browser LOG     Failed to fetch devPagesManifest {}
+[00:07:07.194] Server  ERROR    ⨯ ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/cancel and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/chat and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/checkin and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+
+
+./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+
+
+./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+
+
+./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+
+
+./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+
+
+./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+
+
+./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+
+
+./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+
+
+./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+
+
+./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+
+
+./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+
+[00:07:07.347] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:07:07.347] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/cancel and /appointments.
+[00:07:07.347] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/chat and /appointments.
+[00:07:07.347] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/checkin and /appointments.
+[00:07:07.347] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:07:07.347] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:07:07.347] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:07:07.347] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:07:07.347] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:07:07.347] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:07:07.347] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:07:07.347] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:07:07.347] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:07:07.347] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:07:07.347] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:07:07.347] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:07:07.347] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:07:07.347] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:07:07.347] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:07:07.347] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:07:07.759] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:07:07.759] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:07:07.759] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:07:07.759] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/cancel and /appointments.
+[00:07:07.759] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/chat and /appointments.
+[00:07:07.759] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/checkin and /appointments.
+[00:07:07.759] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:07:07.759] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:07:07.759] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:07:07.759] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:07:07.759] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:07:07.759] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:07:07.759] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:07:07.759] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:07:07.759] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:07:07.759] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:07:07.759] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:07:07.759] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:07:07.759] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:07:07.759] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:07:07.759] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:07:07.759] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/cancel and /appointments.
+[00:07:07.759] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/chat and /appointments.
+[00:07:07.759] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/checkin and /appointments.
+[00:07:07.759] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:07:07.759] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:07:07.759] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:07:07.759] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:07:07.760] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:07:07.760] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:07:07.760] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:07:07.760] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:07:07.760] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:07:07.760] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:07:07.760] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:07:07.760] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:07:07.760] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:07:07.760] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:07:07.760] Browser ERROR   uncaughtError: Error: ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+
+[00:07:07.760] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:07:07.760] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/cancel and /appointments.
+[00:07:07.760] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/chat and /appointments.
+[00:07:07.760] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/checkin and /appointments.
+[00:07:07.760] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:07:07.760] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:07:07.760] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:07:07.760] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:07:07.760] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:07:07.760] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:07:07.760] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:07:07.760] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:07:07.760] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:07:07.760] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:07:07.760] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:07:07.760] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:07:07.760] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:07:07.760] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:07:07.760] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:07:07.760] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:07:12.331] Server  ERROR    ⨯ ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:07:12.332] Server  ERROR    ⨯ ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/cancel and /appointments.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/chat and /appointments.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/checkin and /appointments.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/directions and /appointments.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:07:12.621] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:07:12.621] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/cancel and /appointments.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/chat and /appointments.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/checkin and /appointments.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/directions and /appointments.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:07:12.621] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:07:12.621] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:07:12.621] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:07:12.632] Server  ERROR    ⨯ ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/cancel and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/chat and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/checkin and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/directions and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+
+
+./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+
+
+./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+
+
+./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+
+
+./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+
+
+./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+
+
+./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+
+
+./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+
+
+./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+
+
+./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+
+
+./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+
+
+./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+
+[00:07:12.749] Browser ERROR   uncaughtError: Error: ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+
+[00:07:12.945] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:07:12.945] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/cancel and /appointments.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/chat and /appointments.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/checkin and /appointments.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/directions and /appointments.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/cancel and /appointments.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/chat and /appointments.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/checkin and /appointments.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/directions and /appointments.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/cancel and /appointments.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/chat and /appointments.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/checkin and /appointments.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/directions and /appointments.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:07:12.945] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:07:12.945] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:07:12.945] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:07:15.136] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:07:15.136] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/cancel and /appointments.
+[00:07:15.136] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/chat and /appointments.
+[00:07:15.136] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/checkin and /appointments.
+[00:07:15.136] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/directions and /appointments.
+[00:07:15.136] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:07:15.136] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:07:15.136] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:07:15.136] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:07:15.136] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:07:15.136] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:07:15.136] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:07:15.136] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:07:15.136] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:07:15.136] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:07:15.136] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:07:15.136] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:07:15.136] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:07:15.136] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:07:15.136] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:07:15.136] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:07:19.216] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id] and /appointments.
+[00:07:19.216] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/cancel and /appointments.
+[00:07:19.216] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/chat and /appointments.
+[00:07:19.216] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/checkin and /appointments.
+[00:07:19.216] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/directions and /appointments.
+[00:07:19.216] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/[id]/reschedule and /appointments.
+[00:07:19.216] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/calendar and /appointments.
+[00:07:19.216] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/create and /appointments.
+[00:07:19.216] Browser ERROR   ./Documents/pulsecal/app/appointments
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/appointments/list and /appointments.
+[00:07:19.216] Browser ERROR   ./Documents/pulsecal/app/dashboard
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/dashboard and /dashboard.
+[00:07:19.216] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records and /health.
+[00:07:19.216] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/[id] and /health.
+[00:07:19.216] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/medical-records/create and /health.
+[00:07:19.216] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions and /health.
+[00:07:19.216] Browser ERROR   ./Documents/pulsecal/app/health
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/health/prescriptions/[id] and /health.
+[00:07:19.216] Browser ERROR   ./Documents/pulsecal/app/notifications
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/notifications and /notifications.
+[00:07:19.216] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile and /profile.
+[00:07:19.216] Browser ERROR   ./Documents/pulsecal/app/profile
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/profile/security and /profile.
+[00:07:19.216] Browser ERROR   ./Documents/pulsecal/app/services
+You cannot have two parallel pages that resolve to the same path. Please check /(dashboard)/services/insurance and /services.
+[00:07:19.216] Browser ERROR   ./Documents/middleware.ts
+Middleware is missing expected function export name
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:07:19.216] Browser ERROR   ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:07:29.153] Server  ERROR    ⨯ ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:07:29.155] Server  ERROR    ⨯ ./Documents/middleware.ts:1:1
+Module not found: Can't resolve './lib/system-monitor'
+> 1 | import { systemMonitor } from "./lib/system-monitor";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | systemMonitor.startMonitoring(); 
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+

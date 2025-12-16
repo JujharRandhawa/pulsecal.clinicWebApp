@@ -1,0 +1,31 @@
+{
+  "sorted_middleware": [],
+  "middleware": {
+    "/": {
+      "files": [
+        "server/edge/chunks/Documents_pulsecal_a50ea119._.js",
+        "server/edge/chunks/[root-of-the-server]__d59efa8f._.js",
+        "server/edge/chunks/turbopack-Documents_pulsecal_edge-wrapper_d3307cd5.js"
+      ],
+      "name": "middleware",
+      "page": "/",
+      "matchers": [
+        {
+          "regexp": "^/.*$",
+          "originalSource": "/:path*"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "env": {
+        "__NEXT_BUILD_ID": "development",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "TWxkkQg+7SEaeu+EmB9NQ0oyCwdWan1GMoJJVZySbF0=",
+        "__NEXT_PREVIEW_MODE_ID": "50c53699fb85d9a5f7714aedbc0a654d",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "c49530db71ca2e58109b7508226b696cf4435ca2f02496d1a8c227b911b94e4b",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "95baa3d310e217e6f3e5233f7d0bd4199c76ef70b331f76c26210e7f480ccb75"
+      }
+    }
+  },
+  "instrumentation": null,
+  "functions": {}
+}
