@@ -33,8 +33,9 @@ export const authenticate = async (
     const decodedToken = await admin.auth().verifyIdToken(token);
     
     // Find or create user in database
+    // First try to find by firebaseUid (most reliable)
     let user = await prisma.user.findUnique({
-      where: { email: decodedToken.email || '' },
+      where: { firebaseUid: decodedToken.uid },
       select: {
         id: true,
         email: true,
@@ -44,6 +45,21 @@ export const authenticate = async (
         firebaseUid: true,
       },
     });
+    
+    // If not found by firebaseUid, try by email
+    if (!user && decodedToken.email) {
+      user = await prisma.user.findUnique({
+        where: { email: decodedToken.email },
+        select: {
+          id: true,
+          email: true,
+          role: true,
+          isActive: true,
+          isEmailVerified: true,
+          firebaseUid: true,
+        },
+      });
+    }
 
     // If user doesn't exist, create them
     if (!user && decodedToken.email) {

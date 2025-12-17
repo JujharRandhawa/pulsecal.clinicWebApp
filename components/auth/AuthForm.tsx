@@ -50,7 +50,7 @@ export function AuthForm({ mode }: AuthFormProps) {
         )
         
         toast.success("Account created successfully!")
-        router.push("/dashboard")
+        router.push("/onboarding")
       }
     } catch (error: any) {
       console.error("Authentication error:", error)
@@ -83,7 +83,8 @@ export function AuthForm({ mode }: AuthFormProps) {
         ? "Signed in with Google successfully!" 
         : "Account created with Google successfully!"
     )
-    router.push("/dashboard")
+    // Redirect to onboarding for new signups, dashboard for logins
+    router.push(mode === "signup" ? "/onboarding" : "/dashboard")
   }
 
   const handleGoogleError = (error: Error) => {

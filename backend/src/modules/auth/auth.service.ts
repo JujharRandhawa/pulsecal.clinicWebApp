@@ -11,12 +11,14 @@ export const syncUserProfile = async (firebaseUid: string, data: {
   dateOfBirth?: Date;
   profileImage?: string;
 }) => {
-  const user = await prisma.user.findFirst({
+  // Use findUnique since firebaseUid is unique
+  const user = await prisma.user.findUnique({
     where: { firebaseUid },
   });
 
   if (!user) {
-    throw new AppError('User not found', 404);
+    logger.warn(`User not found for firebaseUid: ${firebaseUid}`);
+    throw new AppError('User not found. Please try signing in again.', 404);
   }
 
   const updated = await prisma.user.update({
@@ -49,7 +51,7 @@ export const syncUserProfile = async (firebaseUid: string, data: {
 
 // Get user profile
 export const getUserProfile = async (firebaseUid: string) => {
-  const user = await prisma.user.findFirst({
+  const user = await prisma.user.findUnique({
     where: { firebaseUid },
     select: {
       id: true,
@@ -79,7 +81,7 @@ export const updateUserRole = async (
   firebaseUid: string,
   role: 'PATIENT' | 'DOCTOR' | 'RECEPTIONIST' | 'ADMIN'
 ) => {
-  const user = await prisma.user.findFirst({
+  const user = await prisma.user.findUnique({
     where: { firebaseUid },
   });
 

@@ -30,12 +30,14 @@ class ApiService {
     this.api.interceptors.response.use(
       (response) => response,
       async (error) => {
+        // Only redirect on 401 if we have a response (not network errors)
         if (error.response?.status === 401) {
           // Redirect to login on unauthorized
           if (typeof window !== "undefined") {
             window.location.href = "/auth/login"
           }
         }
+        // For network errors, don't redirect - let the calling code handle it
         return Promise.reject(error)
       },
     )

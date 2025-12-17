@@ -14,34 +14,49 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-let app: FirebaseApp;
-let auth: Auth;
+let app: FirebaseApp | null = null;
+let auth: Auth | null = null;
 let analytics: Analytics | null = null;
 
 if (typeof window !== 'undefined') {
   // Only initialize on client side
-  if (getApps().length === 0) {
-    app = initializeApp(firebaseConfig);
-  } else {
-    app = getApps()[0];
+  try {
+    if (getApps().length === 0) {
+      app = initializeApp(firebaseConfig);
+    } else {
+      app = getApps()[0];
+    }
+    
+    auth = getAuth(app);
+    
+    // Initialize Analytics only in browser
+    if (typeof window !== 'undefined') {
+      try {
+        analytics = getAnalytics(app);
+      } catch (analyticsError) {
+        console.warn('Analytics initialization failed:', analyticsError);
+      }
+    }
+  } catch (error) {
+    console.error('Firebase initialization error:', error);
+    throw error;
   }
-  
-  auth = getAuth(app);
-  
-  // Initialize Analytics only in browser
-  if (typeof window !== 'undefined') {
-    analytics = getAnalytics(app);
-  }
-} else {
-  // Server-side: create minimal app instance
-  if (getApps().length === 0) {
-    app = initializeApp(firebaseConfig);
-  } else {
-    app = getApps()[0];
-  }
-  // Auth is not available on server side
-  auth = {} as Auth;
 }
 
-export { app, auth, analytics };
+// Export with proper types
+export { app, analytics };
+
+// Export auth with a getter that ensures it's available on client
+export const getAuthInstance = (): Auth => {
+  if (typeof window === 'undefined') {
+    throw new Error('Firebase auth is only available on the client side');
+  }
+  if (!auth) {
+    throw new Error('Firebase auth is not initialized. Please refresh the page.');
+  }
+  return auth;
+};
+
+// Export auth directly (may be null on server)
+export { auth };
 

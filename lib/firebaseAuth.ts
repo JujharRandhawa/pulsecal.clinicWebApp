@@ -9,7 +9,7 @@ import {
   User,
   UserCredential
 } from 'firebase/auth';
-import { auth } from './firebase';
+import { auth, getAuthInstance } from './firebase';
 import { logger } from './logger';
 
 /**
@@ -21,7 +21,8 @@ export const signUp = async (
   displayName?: string
 ): Promise<UserCredential> => {
   try {
-    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+    const authInstance = getAuthInstance();
+    const userCredential = await createUserWithEmailAndPassword(authInstance, email, password);
     
     // Update display name if provided
     if (displayName && userCredential.user) {
@@ -58,7 +59,8 @@ export const signIn = async (
   password: string
 ): Promise<UserCredential> => {
   try {
-    return await signInWithEmailAndPassword(auth, email, password);
+    const authInstance = getAuthInstance();
+    return await signInWithEmailAndPassword(authInstance, email, password);
   } catch (error) {
     console.error('Sign in error:', error);
     throw error;
@@ -70,15 +72,76 @@ export const signIn = async (
  */
 export const signInWithGoogle = async (): Promise<UserCredential> => {
   try {
+    // Ensure we're on the client side
+    if (typeof window === 'undefined') {
+      throw new Error('Google authentication is only available on the client side');
+    }
+
+    // Check if sessionStorage is available (required for Firebase popup flow)
+    try {
+      const testKey = '__firebase_auth_test__';
+      sessionStorage.setItem(testKey, 'test');
+      sessionStorage.removeItem(testKey);
+    } catch (storageError) {
+      throw new Error('Session storage is not available. Please enable cookies and storage for this site.');
+    }
+
+    // Get auth instance (will throw if not available)
+    const authInstance = getAuthInstance();
+    
     const provider = new GoogleAuthProvider();
     // Request additional scopes if needed
     provider.addScope('profile');
     provider.addScope('email');
     
-    return await signInWithPopup(auth, provider);
-  } catch (error) {
+    // Set custom parameters
+    provider.setCustomParameters({
+      prompt: 'select_account'
+    });
+    
+    // Use signInWithPopup with better error handling
+    let result: UserCredential;
+    try {
+      result = await signInWithPopup(authInstance, provider);
+    } catch (popupError: any) {
+      // Handle specific Firebase errors
+      if (popupError.code === 'auth/popup-blocked') {
+        throw new Error('Popup was blocked. Please allow popups for this site.');
+      } else if (popupError.code === 'auth/popup-closed-by-user') {
+        throw new Error('Sign-in was cancelled.');
+      } else if (popupError.code === 'auth/network-request-failed') {
+        throw new Error('Network error. Please check your connection.');
+      } else if (popupError.message?.includes('initial state') || popupError.message?.includes('sessionStorage')) {
+        throw new Error('Authentication state error. Please try again or refresh the page.');
+      }
+      throw popupError;
+    }
+    
+    // Wait a moment for Firebase to fully process the authentication
+    await new Promise(resolve => setTimeout(resolve, 200));
+    
+    // Ensure we have a user
+    if (!result.user || !result.user.uid) {
+      throw new Error('Google authentication completed but user data is missing');
+    }
+    
+    // Verify the user is actually authenticated in Firebase
+    if (authInstance.currentUser?.uid !== result.user.uid) {
+      // Wait a bit more and check again
+      await new Promise(resolve => setTimeout(resolve, 300));
+      if (authInstance.currentUser?.uid !== result.user.uid) {
+        throw new Error('Authentication state mismatch. Please try again.');
+      }
+    }
+    
+    return result;
+  } catch (error: any) {
     console.error('Google sign in error:', error);
-    throw error;
+    // Re-throw with more context
+    if (error.code) {
+      throw error; // Firebase error with code
+    }
+    throw new Error(`Google sign in failed: ${error.message || 'Unknown error'}`);
   }
 };
 
@@ -87,7 +150,8 @@ export const signInWithGoogle = async (): Promise<UserCredential> => {
  */
 export const logOut = async (): Promise<void> => {
   try {
-    await signOut(auth);
+    const authInstance = getAuthInstance();
+    await signOut(authInstance);
   } catch (error) {
     console.error('Sign out error:', error);
     throw error;
@@ -99,7 +163,8 @@ export const logOut = async (): Promise<void> => {
  */
 export const resetPassword = async (email: string): Promise<void> => {
   try {
-    await sendPasswordResetEmail(auth, email);
+    const authInstance = getAuthInstance();
+    await sendPasswordResetEmail(authInstance, email);
   } catch (error) {
     console.error('Password reset error:', error);
     throw error;
@@ -111,7 +176,8 @@ export const resetPassword = async (email: string): Promise<void> => {
  */
 export const getIdToken = async (forceRefresh: boolean = false): Promise<string | null> => {
   try {
-    const user = auth.currentUser;
+    const authInstance = getAuthInstance();
+    const user = authInstance.currentUser;
     if (!user) {
       return null;
     }
@@ -126,7 +192,34 @@ export const getIdToken = async (forceRefresh: boolean = false): Promise<string 
  * Get current user
  */
 export const getCurrentUser = (): User | null => {
-  return auth.currentUser;
+  try {
+    const authInstance = getAuthInstance();
+    return authInstance.currentUser;
+  } catch {
+    return null;
+  }
+};
+
+/**
+ * Get ID token with retry logic (useful after Google signup)
+ */
+const getIdTokenWithRetry = async (maxRetries = 3, delay = 500): Promise<string | null> => {
+  for (let i = 0; i < maxRetries; i++) {
+    try {
+      const token = await getIdToken(true); // Force refresh
+      if (token) {
+        return token;
+      }
+    } catch (error) {
+      console.warn(`Token retrieval attempt ${i + 1} failed:`, error);
+    }
+    
+    if (i < maxRetries - 1) {
+      // Wait before retrying
+      await new Promise(resolve => setTimeout(resolve, delay));
+    }
+  }
+  return null;
 };
 
 /**
@@ -138,15 +231,29 @@ export const syncUserProfile = async (
   lastName?: string,
   phone?: string,
   dateOfBirth?: Date,
-  profileImage?: string
+  profileImage?: string,
+  role?: "PATIENT" | "DOCTOR" | "RECEPTIONIST"
 ): Promise<void> => {
   try {
-    const token = await getIdToken();
-    if (!token) {
-      throw new Error('No authentication token available');
-    }
-
+    // Wait a bit for Firebase to fully initialize the user
+    await new Promise(resolve => setTimeout(resolve, 500));
+    
+    // Verify user is authenticated
     const user = getCurrentUser();
+    if (!user || !user.uid) {
+      // Wait a bit more and retry
+      await new Promise(resolve => setTimeout(resolve, 500));
+      const retryUser = getCurrentUser();
+      if (!retryUser || !retryUser.uid) {
+        throw new Error('User not found. Please try signing in again.');
+      }
+    }
+    
+    // Get token with retry logic
+    const token = await getIdTokenWithRetry(5, 500);
+    if (!token) {
+      throw new Error('No authentication token available. Please try signing in again.');
+    }
     
     // If name not provided, try to extract from Firebase user
     let finalFirstName = firstName;
@@ -154,10 +261,18 @@ export const syncUserProfile = async (
     let finalProfileImage = profileImage;
 
     if (user) {
-      if (!finalFirstName && !finalLastName && user.displayName) {
-        const nameParts = user.displayName.split(' ');
-        finalFirstName = nameParts[0] || '';
-        finalLastName = nameParts.slice(1).join(' ') || '';
+      // Try displayName first, then email prefix
+      if (!finalFirstName && !finalLastName) {
+        if (user.displayName) {
+          const nameParts = user.displayName.split(' ');
+          finalFirstName = nameParts[0] || '';
+          finalLastName = nameParts.slice(1).join(' ') || '';
+        } else if (user.email) {
+          // Fallback to email prefix if no display name
+          const emailPrefix = user.email.split('@')[0];
+          finalFirstName = emailPrefix;
+          finalLastName = '';
+        }
       }
       
       if (!finalProfileImage && user.photoURL) {
@@ -179,16 +294,18 @@ export const syncUserProfile = async (
         phone,
         dateOfBirth: dateOfBirth?.toISOString(),
         profileImage: finalProfileImage,
+        role: role, // Include role if provided
       }),
     });
 
     if (!response.ok) {
-      const error = await response.json();
-      throw new Error(error.message || 'Failed to sync profile');
+      const errorData = await response.json().catch(() => ({ message: 'Failed to sync profile' }));
+      throw new Error(errorData.message || `Failed to sync profile: ${response.status} ${response.statusText}`);
     }
 
-    return await response.json();
-  } catch (error) {
+    const result = await response.json();
+    return result;
+  } catch (error: any) {
     console.error('Sync profile error:', error);
     throw error;
   }

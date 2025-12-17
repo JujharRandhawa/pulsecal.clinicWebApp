@@ -3,21 +3,18 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Stethoscope, User, Building2 } from "lucide-react"
 import { AuthModal } from "./AuthModal"
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [authModalOpen, setAuthModalOpen] = useState(false)
   const [authMode, setAuthMode] = useState<"login" | "signup">("login")
+  const [selectedRole, setSelectedRole] = useState<"doctor" | "patient" | "receptionist">("patient")
 
-  const handleLogin = () => {
-    setAuthMode("login")
-    setAuthModalOpen(true)
-  }
-
-  const handleSignup = () => {
-    setAuthMode("signup")
+  const handleAuth = (role: "doctor" | "patient" | "receptionist", mode: "login" | "signup") => {
+    setSelectedRole(role)
+    setAuthMode(mode)
     setAuthModalOpen(true)
   }
 
@@ -61,11 +58,34 @@ export function Header() {
           </div>
 
           {/* Desktop Auth Buttons */}
-          <div className="hidden items-center gap-4 md:flex">
-            <Button variant="ghost" onClick={handleLogin}>
-              Log in
+          <div className="hidden items-center gap-3 md:flex">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => handleAuth("doctor", "login")}
+              className="gap-2"
+            >
+              <Stethoscope className="h-4 w-4" />
+              Doctor
             </Button>
-            <Button onClick={handleSignup}>Sign up</Button>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => handleAuth("patient", "login")}
+              className="gap-2"
+            >
+              <User className="h-4 w-4" />
+              Patient
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => handleAuth("receptionist", "login")}
+              className="gap-2"
+            >
+              <Building2 className="h-4 w-4" />
+              Receptionist
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -91,11 +111,29 @@ export function Header() {
                 About
               </Link>
               <div className="flex flex-col gap-2 border-t border-border pt-4">
-                <Button variant="ghost" onClick={handleLogin} className="w-full">
-                  Log in
+                <Button
+                  variant="outline"
+                  onClick={() => handleAuth("doctor", "login")}
+                  className="w-full justify-start gap-2"
+                >
+                  <Stethoscope className="h-4 w-4" />
+                  Doctor Login / Signup
                 </Button>
-                <Button onClick={handleSignup} className="w-full">
-                  Sign up
+                <Button
+                  variant="outline"
+                  onClick={() => handleAuth("patient", "login")}
+                  className="w-full justify-start gap-2"
+                >
+                  <User className="h-4 w-4" />
+                  Patient Login / Signup
+                </Button>
+                <Button
+                  variant="outline"
+                  onClick={() => handleAuth("receptionist", "login")}
+                  className="w-full justify-start gap-2"
+                >
+                  <Building2 className="h-4 w-4" />
+                  Receptionist Login / Signup
                 </Button>
               </div>
             </div>
@@ -108,6 +146,7 @@ export function Header() {
         onClose={() => setAuthModalOpen(false)}
         mode={authMode}
         onSwitchMode={(mode) => setAuthMode(mode)}
+        role={selectedRole}
       />
     </>
   )
