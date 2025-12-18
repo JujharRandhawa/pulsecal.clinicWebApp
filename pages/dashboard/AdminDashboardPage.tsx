@@ -13,27 +13,35 @@ export default function AdminDashboardPage() {
   const stats = [
     {
       title: "Total Users",
-      value: "1,234",
-      change: "+12%",
+      value: 1234,
+      trend: { value: 12, isPositive: true, label: "from last month" },
       icon: Users,
+      color: "blue" as const,
+      description: "Registered users",
     },
     {
       title: "Appointments Today",
-      value: "89",
-      change: "+5%",
+      value: 89,
+      trend: { value: 5, isPositive: true, label: "from yesterday" },
       icon: Calendar,
+      color: "green" as const,
+      description: "Scheduled today",
     },
     {
       title: "Revenue",
       value: "$45,231",
-      change: "+20%",
+      trend: { value: 20, isPositive: true, label: "this month" },
       icon: DollarSign,
+      color: "purple" as const,
+      description: "Total revenue",
     },
     {
       title: "Active Sessions",
-      value: "234",
-      change: "+18%",
+      value: 234,
+      trend: { value: 18, isPositive: true, label: "currently online" },
       icon: Activity,
+      color: "indigo" as const,
+      description: "Live sessions",
     },
   ]
 
@@ -44,9 +52,17 @@ export default function AdminDashboardPage() {
         <p className="text-muted-foreground">Welcome back, {user?.firstName}</p>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {stats.map((stat) => (
-          <StatsCard key={stat.title} {...stat} />
+          <StatsCard 
+            key={stat.title} 
+            title={stat.title}
+            value={stat.value}
+            icon={stat.icon}
+            trend={stat.trend}
+            color={stat.color}
+            description={stat.description}
+          />
         ))}
       </div>
 

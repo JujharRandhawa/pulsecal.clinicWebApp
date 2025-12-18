@@ -104,28 +104,48 @@ export default function ReceptionistDashboardPage() {
 
   const stats = [
     {
-      title: "Today's Appointments",
-      value: todayStats.appointments.toString(),
-      change: `${todayStats.completed} completed`,
-      icon: Calendar,
-    },
-    {
-      title: "Waiting Patients",
-      value: todayStats.waiting.toString(),
-      change: "In queue",
+      title: "Total Patients",
+      value: todayStats.appointments,
+      trend: { 
+        label: `${todayStats.completed} completed`,
+        isPositive: true 
+      },
       icon: Users,
+      color: "green" as const,
+      description: "Total appointments today",
     },
     {
-      title: "Completed",
-      value: todayStats.completed.toString(),
-      change: "All on time",
+      title: "Pending",
+      value: todayStats.waiting,
+      trend: { 
+        label: "In queue",
+        isPositive: false 
+      },
+      icon: Clock,
+      color: "orange" as const,
+      description: "Patients waiting",
+    },
+    {
+      title: "Appointments",
+      value: todayStats.appointments,
+      trend: { 
+        label: "Scheduled today",
+        isPositive: true 
+      },
+      icon: Calendar,
+      color: "blue" as const,
+      description: "Total scheduled",
+    },
+    {
+      title: "Revenue",
+      value: `$${((todayStats.completed * 150) + (todayStats.appointments * 50)).toLocaleString()}`,
+      trend: { 
+        label: "Today's earnings",
+        isPositive: true 
+      },
       icon: CheckCircle,
-    },
-    {
-      title: "Cancelled",
-      value: todayStats.cancelled.toString(),
-      change: "Today",
-      icon: XCircle,
+      color: "purple" as const,
+      description: "Estimated revenue",
     },
   ]
 
@@ -144,9 +164,17 @@ export default function ReceptionistDashboardPage() {
         </Button>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {stats.map((stat) => (
-          <StatsCard key={stat.title} {...stat} />
+          <StatsCard 
+            key={stat.title} 
+            title={stat.title}
+            value={stat.value}
+            icon={stat.icon}
+            trend={stat.trend}
+            color={stat.color}
+            description={stat.description}
+          />
         ))}
       </div>
 

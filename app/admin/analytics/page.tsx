@@ -17,29 +17,33 @@ export default function AnalyticsPage() {
           title="Total Revenue"
           value="$125.4k"
           icon={DollarSign}
-          color="bg-success"
-          trend={{ value: 15, isPositive: true }}
+          color="purple"
+          trend={{ value: 15, isPositive: true, label: "from last month" }}
+          description="Total platform revenue"
         />
         <StatsCard
           title="New Patients"
-          value="342"
+          value={342}
           icon={Users}
-          color="bg-primary"
-          trend={{ value: 12, isPositive: true }}
+          color="green"
+          trend={{ value: 12, isPositive: true, label: "this month" }}
+          description="New registrations"
         />
         <StatsCard
           title="Appointments"
-          value="1,456"
+          value={1456}
           icon={Calendar}
-          color="bg-secondary"
-          trend={{ value: 8, isPositive: true }}
+          color="blue"
+          trend={{ value: 8, isPositive: true, label: "this month" }}
+          description="Total appointments"
         />
         <StatsCard
           title="Growth Rate"
           value="23%"
           icon={TrendingUp}
-          color="bg-accent"
-          trend={{ value: 5, isPositive: true }}
+          color="indigo"
+          trend={{ value: 5, isPositive: true, label: "monthly growth" }}
+          description="Platform growth"
         />
       </div>
 

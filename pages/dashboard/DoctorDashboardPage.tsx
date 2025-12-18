@@ -122,27 +122,49 @@ export default function DoctorDashboardPage() {
   const dashboardStats = [
     {
       title: "Today's Appointments",
-      value: stats.today.appointments.toString(),
-      change: `${stats.today.appointments - stats.yesterday.appointments >= 0 ? "+" : ""}${stats.today.appointments - stats.yesterday.appointments} from yesterday`,
+      value: stats.today.appointments,
+      trend: { 
+        value: stats.today.appointments - stats.yesterday.appointments,
+        isPositive: stats.today.appointments >= stats.yesterday.appointments,
+        label: "from yesterday"
+      },
       icon: Calendar,
+      color: "blue" as const,
+      description: "Scheduled today",
     },
     {
       title: "Today's Revenue",
       value: `$${stats.today.revenue.toLocaleString()}`,
-      change: `$${(stats.today.revenue - stats.yesterday.revenue).toLocaleString()} from yesterday`,
+      trend: { 
+        value: Math.round(((stats.today.revenue - stats.yesterday.revenue) / stats.yesterday.revenue) * 100),
+        isPositive: stats.today.revenue >= stats.yesterday.revenue,
+        label: "from yesterday"
+      },
       icon: DollarSign,
+      color: "purple" as const,
+      description: "Revenue earned today",
     },
     {
       title: "Patients Seen",
-      value: stats.today.patients.toString(),
-      change: `${stats.today.appointments - stats.today.patients} remaining`,
+      value: stats.today.patients,
+      trend: { 
+        label: `${stats.today.appointments - stats.today.patients} remaining`,
+        isPositive: true
+      },
       icon: Users,
+      color: "green" as const,
+      description: "Completed today",
     },
     {
       title: "Monthly Revenue",
       value: `$${stats.thisMonth.revenue.toLocaleString()}`,
-      change: `${((stats.thisMonth.revenue / stats.thisWeek.revenue) * 7).toFixed(0)}% of monthly target`,
+      trend: { 
+        label: "This month",
+        isPositive: true
+      },
       icon: TrendingUp,
+      color: "indigo" as const,
+      description: "Total monthly revenue",
     },
   ]
 
@@ -169,9 +191,17 @@ export default function DoctorDashboardPage() {
       </div>
 
       {/* Quick Stats */}
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {dashboardStats.map((stat) => (
-          <StatsCard key={stat.title} {...stat} />
+          <StatsCard 
+            key={stat.title} 
+            title={stat.title}
+            value={stat.value}
+            icon={stat.icon}
+            trend={stat.trend}
+            color={stat.color}
+            description={stat.description}
+          />
         ))}
       </div>
 

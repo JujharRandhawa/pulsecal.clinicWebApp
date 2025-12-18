@@ -129,21 +129,6 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  {/* Chart Preview */}
-                  <div className="mt-4 rounded-lg bg-gray-50 p-4 border border-gray-200">
-                    <div className="h-24 flex items-end justify-between gap-2">
-                      {[65, 80, 55, 90, 70, 85, 75].map((height, i) => (
-                        <div key={i} className="flex-1 flex flex-col items-center">
-                          <div 
-                            className="w-full rounded-t bg-gradient-to-t from-primary to-primary/60 transition-all hover:from-primary/80 hover:to-primary/40"
-                            style={{ height: `${height}%` }}
-                          />
-                          <div className="mt-1 h-1 w-1 rounded-full bg-gray-400" />
-                        </div>
-                      ))}
-                    </div>
-                    <p className="mt-2 text-center text-xs font-medium text-gray-600">Weekly Analytics</p>
-                  </div>
                 </div>
               </div>
             </div>

@@ -16,15 +16,19 @@ export default function PatientDashboardPage() {
   const stats = [
     {
       title: "Upcoming Appointments",
-      value: "3",
-      change: "2 this week",
+      value: 3,
+      trend: { label: "2 this week", isPositive: true },
       icon: Calendar,
+      color: "blue" as const,
+      description: "Scheduled visits",
     },
     {
       title: "Active Prescriptions",
-      value: "2",
-      change: "All current",
+      value: 2,
+      trend: { label: "All current", isPositive: true },
       icon: Stethoscope,
+      color: "green" as const,
+      description: "Active medications",
     },
   ]
 
@@ -35,9 +39,17 @@ export default function PatientDashboardPage() {
         <p className="text-muted-foreground">Here's what's happening with your health</p>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className="grid gap-6 md:grid-cols-2">
         {stats.map((stat) => (
-          <StatsCard key={stat.title} {...stat} />
+          <StatsCard 
+            key={stat.title} 
+            title={stat.title}
+            value={stat.value}
+            icon={stat.icon}
+            trend={stat.trend}
+            color={stat.color}
+            description={stat.description}
+          />
         ))}
       </div>
 
