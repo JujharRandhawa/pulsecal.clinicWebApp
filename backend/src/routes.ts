@@ -15,6 +15,8 @@ import chatRoutes from './modules/chat/chat.routes';
 import queueRoutes from './modules/queue/queue.routes';
 import importExportRoutes from './modules/importExport/importExport.routes';
 import adminRoutes from './modules/admin/admin.routes';
+import doctorsRoutes from './modules/doctors/doctors.routes';
+import receptionistsRoutes from './modules/receptionists/receptionists.routes';
 import { config } from './config/env';
 
 const router = Router();
@@ -38,6 +40,8 @@ router.use(`${apiPrefix}/chat`, chatRoutes);
 router.use(`${apiPrefix}/queue`, queueRoutes);
 router.use(`${apiPrefix}/data`, importExportRoutes);
 router.use(`${apiPrefix}/admin`, adminRoutes);
+router.use(`${apiPrefix}/doctors`, doctorsRoutes);
+router.use(`${apiPrefix}/receptionists`, receptionistsRoutes);
 
 export default router;
 

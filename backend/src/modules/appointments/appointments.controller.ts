@@ -49,6 +49,18 @@ export const createAppointmentController = async (
       throw new AppError(error.details[0].message, 400);
     }
     const appointment = await createAppointment(value);
+    
+    // Emit real-time notification
+    const { emitNewAppointment } = await import('../../utils/socketEmitter');
+    emitNewAppointment({
+      id: appointment.id,
+      doctorId: appointment.doctorId,
+      patientId: appointment.patientId,
+      patientName: `${appointment.patient.firstName} ${appointment.patient.lastName}`,
+      scheduledAt: appointment.scheduledAt,
+      reason: appointment.reason || undefined,
+    });
+    
     sendSuccess(res, appointment, 'Appointment created successfully', 201);
   } catch (err) {
     next(err);
@@ -104,6 +116,17 @@ export const updateAppointmentController = async (
       throw new AppError(error.details[0].message, 400);
     }
     const appointment = await updateAppointment(req.params.id, value);
+    
+    // Emit real-time update
+    const { emitAppointmentUpdate } = await import('../../utils/socketEmitter');
+    emitAppointmentUpdate({
+      id: appointment.id,
+      doctorId: appointment.doctorId,
+      patientId: appointment.patientId,
+      status: appointment.status,
+      scheduledAt: appointment.scheduledAt,
+    });
+    
     sendSuccess(res, appointment, 'Appointment updated successfully');
   } catch (err) {
     next(err);

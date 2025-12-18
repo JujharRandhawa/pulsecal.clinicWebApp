@@ -155,6 +155,12 @@ export const updatePaymentStatus = async (
           lastName: true,
         },
       },
+      appointment: {
+        select: {
+          id: true,
+          doctorId: true,
+        },
+      },
     },
   });
 

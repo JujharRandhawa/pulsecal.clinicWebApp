@@ -101,6 +101,19 @@ export const updatePaymentStatusController = async (
       value.status,
       value.transactionId
     );
+    
+    // Emit real-time notification to doctor if payment has appointment
+    if (payment.appointmentId && payment.appointment?.doctorId) {
+      const { emitPaymentUpdate } = await import('../../utils/socketEmitter');
+      emitPaymentUpdate({
+        id: payment.id,
+        appointmentId: payment.appointmentId || undefined,
+        doctorId: payment.appointment.doctorId,
+        amount: Number(payment.amount),
+        status: payment.status,
+      });
+    }
+    
     sendSuccess(res, payment, 'Payment status updated successfully');
   } catch (err) {
     next(err);

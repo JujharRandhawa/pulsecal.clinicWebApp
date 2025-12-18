@@ -7,10 +7,14 @@ import { initializeSocket } from './config/socket';
 import { setupChatSocket } from './socket/chat.socket';
 import { setupQueueSocket } from './socket/queue.socket';
 import { setupNotificationSocket } from './socket/notification.socket';
+import { setSocketInstance } from './utils/socketEmitter';
 import { logger } from './utils/logger';
 
 const server = http.createServer(app);
 const io = initializeSocket(server);
+
+// Set socket instance for real-time notifications
+setSocketInstance(io);
 
 setupChatSocket(io);
 setupQueueSocket(io);
