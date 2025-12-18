@@ -6,10 +6,10 @@ import type { Appointment } from "@/types"
 import Link from "next/link"
 
 interface UpcomingAppointmentsCardProps {
-  appointments: Appointment[]
+  appointments?: Appointment[]
 }
 
-export function UpcomingAppointmentsCard({ appointments }: UpcomingAppointmentsCardProps) {
+export function UpcomingAppointmentsCard({ appointments = [] }: UpcomingAppointmentsCardProps) {
   return (
     <Card className="p-6">
       <div className="flex items-center justify-between mb-4">
@@ -21,7 +21,7 @@ export function UpcomingAppointmentsCard({ appointments }: UpcomingAppointmentsC
         </Link>
       </div>
       <div className="space-y-4">
-        {appointments.length === 0 ? (
+        {!appointments || appointments.length === 0 ? (
           <p className="text-sm text-muted-foreground text-center py-8">No upcoming appointments</p>
         ) : (
           appointments.map((appointment) => (

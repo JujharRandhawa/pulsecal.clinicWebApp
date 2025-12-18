@@ -16,7 +16,10 @@ export const formatRelativeTime = (date: string | Date): string => {
   return formatDistance(dateObj, new Date(), { addSuffix: true })
 }
 
-export const getInitials = (name: string): string => {
+export const getInitials = (name: string | null | undefined): string => {
+  if (!name || typeof name !== 'string') {
+    return "U"
+  }
   return name
     .split(" ")
     .map((n) => n[0])

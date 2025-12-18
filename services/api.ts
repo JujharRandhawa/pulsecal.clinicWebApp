@@ -37,6 +37,11 @@ class ApiService {
             window.location.href = "/auth/login"
           }
         }
+        // For network errors, suppress console errors to prevent "Load failed" spam
+        if (error.code === "ERR_NETWORK" || error.message?.includes("Network Error")) {
+          // Silently handle network errors - components should handle fallbacks
+          console.debug("Network error (suppressed):", error.message)
+        }
         // For network errors, don't redirect - let the calling code handle it
         return Promise.reject(error)
       },

@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
@@ -33,6 +33,18 @@ export function AuthModal({ isOpen, onClose, mode, onSwitchMode, role = "patient
   const [googleLoading, setGoogleLoading] = useState(false)
   const router = useRouter()
   const dispatch = useAppDispatch()
+
+  // Reset form when modal opens or mode changes
+  useEffect(() => {
+    if (isOpen) {
+      setEmail("")
+      setPassword("")
+      setName("")
+      setShowPassword(false)
+      setLoading(false)
+      setGoogleLoading(false)
+    }
+  }, [isOpen, mode])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -91,9 +103,16 @@ export function AuthModal({ isOpen, onClose, mode, onSwitchMode, role = "patient
         router.push("/dashboard")
         onClose()
       } else {
+        // Signup flow
         const nameParts = name.trim().split(" ")
         const firstName = nameParts[0] || ""
         const lastName = nameParts.slice(1).join(" ") || ""
+        
+        if (!name.trim()) {
+          toast.error("Please enter your full name")
+          setLoading(false)
+          return
+        }
         
         const userCredential = await signUp(
           email,
@@ -101,8 +120,84 @@ export function AuthModal({ isOpen, onClose, mode, onSwitchMode, role = "patient
           name.trim()
         )
         
+        // Wait for Firebase to initialize
+        await new Promise(resolve => setTimeout(resolve, 500))
+        
+        // Normalize role to uppercase for backend
+        const normalizedRole = role.toUpperCase() as "PATIENT" | "DOCTOR" | "RECEPTIONIST"
+        
         // Sync profile with role
-        await syncUserProfile(firstName, lastName, undefined, undefined, undefined, role.toUpperCase() as "PATIENT" | "DOCTOR" | "RECEPTIONIST")
+        try {
+          await syncUserProfile(firstName, lastName, undefined, undefined, undefined, normalizedRole)
+        } catch (syncError: any) {
+          console.warn("Profile sync warning:", syncError)
+          // Don't block - user can complete onboarding
+        }
+        
+        // Fetch user profile and update Redux
+        try {
+          const token = await getIdToken()
+          if (token) {
+            await new Promise(resolve => setTimeout(resolve, 500))
+            
+            try {
+              const profilePromise = apiService.get("/api/v1/auth/profile")
+              const timeoutPromise = new Promise<never>((_, reject) => 
+                setTimeout(() => reject(new Error("Request timeout")), 5000)
+              )
+              
+              const profileResponse: any = await Promise.race([profilePromise, timeoutPromise])
+              const userProfile = profileResponse?.data || profileResponse
+              
+              if (userProfile && userProfile.id) {
+                const userData = {
+                  id: userProfile.id,
+                  email: userProfile.email,
+                  firstName: userProfile.firstName || firstName,
+                  lastName: userProfile.lastName || lastName,
+                  phone: userProfile.phone,
+                  dateOfBirth: userProfile.dateOfBirth,
+                  role: (userProfile.role || normalizedRole).toLowerCase() as "patient" | "doctor" | "receptionist" | "admin",
+                  isActive: userProfile.isActive !== false,
+                  isEmailVerified: userProfile.isEmailVerified || false,
+                  profileImage: userProfile.profileImage,
+                  onboardingCompleted: userProfile.onboardingCompleted || false,
+                }
+                dispatch(setUser(userData))
+              }
+            } catch (apiError: any) {
+              console.warn("Failed to fetch user profile:", apiError)
+              // Create minimal user data for onboarding
+              const userData = {
+                id: userCredential.user.uid,
+                email: userCredential.user.email || email,
+                firstName: firstName,
+                lastName: lastName,
+                role: role.toLowerCase() as "patient" | "doctor" | "receptionist" | "admin",
+                isActive: true,
+                isEmailVerified: userCredential.user.emailVerified || false,
+                profileImage: userCredential.user.photoURL,
+                onboardingCompleted: false,
+              }
+              dispatch(setUser(userData))
+            }
+          }
+        } catch (tokenError: any) {
+          console.warn("Failed to get token:", tokenError)
+          // Create minimal user data for onboarding
+          const userData = {
+            id: userCredential.user.uid,
+            email: userCredential.user.email || email,
+            firstName: firstName,
+            lastName: lastName,
+            role: role.toLowerCase() as "patient" | "doctor" | "receptionist" | "admin",
+            isActive: true,
+            isEmailVerified: userCredential.user.emailVerified || false,
+            profileImage: userCredential.user.photoURL,
+            onboardingCompleted: false,
+          }
+          dispatch(setUser(userData))
+        }
         
         toast.success("Account created successfully!")
         router.push(`/onboarding?role=${role}`)
@@ -136,18 +231,27 @@ export function AuthModal({ isOpen, onClose, mode, onSwitchMode, role = "patient
     setGoogleLoading(true)
     try {
       let userCredential
+      let isNewUser = false
       try {
-        if (mode === "login") {
-          userCredential = await signInWithGoogle()
-        } else {
-          userCredential = await signUpWithGoogle()
-        }
+        // For Google auth, signInWithGoogle works for both login and signup
+        // It creates account if doesn't exist, signs in if exists
+        userCredential = await signInWithGoogle()
+        
+        // Check if this is a new user by checking if they have a profile in backend
+        // We'll determine this after trying to fetch their profile
+        isNewUser = false
       } catch (authError: any) {
         // Handle specific Firebase errors
         if (authError.message?.includes('initial state') || 
             authError.message?.includes('sessionStorage') ||
             authError.message?.includes('missing initial state')) {
           toast.error('Authentication state error. Please refresh the page and try again.')
+          throw authError
+        }
+        // If it's a login attempt but account doesn't exist, suggest signup
+        if (mode === "login" && authError.code === "auth/user-not-found") {
+          toast.error("No account found. Please sign up first.")
+          onSwitchMode("signup")
           throw authError
         }
         // Re-throw Firebase auth errors to be handled below
@@ -162,21 +266,112 @@ export function AuthModal({ isOpen, onClose, mode, onSwitchMode, role = "patient
       // Wait for Firebase to fully initialize and stabilize
       await new Promise(resolve => setTimeout(resolve, 800))
       
-      // Sync profile with backend (automatically extracts name from Google)
-      let syncSuccess = false
+      // Normalize role to uppercase for backend
+      const normalizedRole = role.toUpperCase() as "PATIENT" | "DOCTOR" | "RECEPTIONIST"
+      
+      // First, try to fetch user profile to check if user already exists
+      let userHasProfile = false
+      let userOnboardingCompleted = false
+      
       try {
-        await syncUserProfile(undefined, undefined, undefined, undefined, undefined, role.toUpperCase() as "PATIENT" | "DOCTOR" | "RECEPTIONIST")
-        syncSuccess = true
-      } catch (syncError: any) {
-        // If sync fails, log but don't block the flow
-        console.warn("Profile sync warning:", syncError)
-        // Still show success but with a warning
-        toast.warning("Signed in successfully, but profile sync had issues. You can update your profile later.")
+        // Get token with retry
+        let token: string | null = null
+        for (let i = 0; i < 3; i++) {
+          token = await getIdToken(true) // Force refresh
+          if (token) break
+          await new Promise(resolve => setTimeout(resolve, 400))
+        }
+        
+        if (token) {
+          // Wait a bit more for backend to be ready
+          await new Promise(resolve => setTimeout(resolve, 500))
+          
+          try {
+            // Use a timeout to prevent hanging
+            const profilePromise = apiService.get("/api/v1/auth/profile")
+            const timeoutPromise = new Promise<never>((_, reject) => 
+              setTimeout(() => reject(new Error("Request timeout")), 5000)
+            )
+            
+            const profileResponse: any = await Promise.race([profilePromise, timeoutPromise])
+            const userProfile = profileResponse?.data || profileResponse
+            
+            if (userProfile && userProfile.id) {
+              userHasProfile = true
+              userOnboardingCompleted = userProfile.onboardingCompleted || false
+              
+              // Map backend user data to frontend User type
+              const userData = {
+                id: userProfile.id,
+                email: userProfile.email,
+                firstName: userProfile.firstName,
+                lastName: userProfile.lastName,
+                phone: userProfile.phone,
+                dateOfBirth: userProfile.dateOfBirth,
+                role: (userProfile.role || "PATIENT").toLowerCase() as "patient" | "doctor" | "receptionist" | "admin",
+                isActive: userProfile.isActive !== false,
+                isEmailVerified: userProfile.isEmailVerified || false,
+                profileImage: userProfile.profileImage,
+                onboardingCompleted: userOnboardingCompleted,
+              }
+              dispatch(setUser(userData))
+              
+              // If user hasn't completed onboarding, treat as new signup
+              if (!userOnboardingCompleted) {
+                isNewUser = true
+              }
+            } else {
+              // No profile found - this is a new user
+              isNewUser = true
+            }
+          } catch (apiError: any) {
+            // Network/timeout errors - check if it's a 404 (user doesn't exist)
+            if (apiError.response?.status === 404) {
+              // User doesn't exist - this is a new user
+              isNewUser = true
+            } else if (apiError.code === "ERR_NETWORK" || 
+                apiError.message?.includes("Network Error") || 
+                apiError.message?.includes("timeout") ||
+                apiError.message === "Request timeout") {
+              // Backend unavailable - if mode is login, assume user exists
+              // If mode is signup, treat as new user
+              if (mode === "login") {
+                userHasProfile = true // Assume existing user if backend unavailable
+              } else {
+                isNewUser = true
+              }
+              console.warn("Backend not available - user can still proceed.")
+            } else {
+              console.warn("Failed to fetch user profile:", apiError.message || apiError)
+              // For other errors, if mode is login, assume user exists
+              if (mode === "login") {
+                userHasProfile = true
+              }
+            }
+          }
+        }
+      } catch (profileError: any) {
+        // Any other errors - just log and continue
+        console.warn("Profile fetch error:", profileError.message || profileError)
+        // If mode is login and we can't fetch, assume user exists
+        if (mode === "login") {
+          userHasProfile = true
+        }
       }
       
-      // Fetch user profile from backend and update Redux state
-      // Only try if sync was successful or if we're logging in (user might already exist)
-      if (syncSuccess || mode === "login") {
+      // Sync profile with backend (only if user doesn't exist or needs update)
+      // This will create profile if it doesn't exist
+      if (!userHasProfile || isNewUser) {
+        try {
+          await syncUserProfile(undefined, undefined, undefined, undefined, undefined, normalizedRole)
+        } catch (syncError: any) {
+          // If sync fails, log but don't block the flow
+          console.warn("Profile sync warning:", syncError)
+        }
+      }
+      
+      // Fetch user profile again after sync (if we synced)
+      if (!userHasProfile || isNewUser) {
         try {
           // Get token with retry
           let token: string | null = null
@@ -202,6 +397,7 @@ export function AuthModal({ isOpen, onClose, mode, onSwitchMode, role = "patient
               const userProfile = profileResponse?.data || profileResponse
               
               if (userProfile && userProfile.id) {
+                userHasProfile = true
                 // Map backend user data to frontend User type
                 const userData = {
                   id: userProfile.id,
@@ -217,6 +413,14 @@ export function AuthModal({ isOpen, onClose, mode, onSwitchMode, role = "patient
                   onboardingCompleted: userProfile.onboardingCompleted || false,
                 }
                 dispatch(setUser(userData))
+                
+                // If user hasn't completed onboarding, treat as new signup
+                if (!userProfile.onboardingCompleted) {
+                  isNewUser = true
+                }
+              } else {
+                // No profile found - this is a new user
+                isNewUser = true
               }
             } catch (apiError: any) {
               // Network/timeout errors are expected if backend is not running
@@ -226,8 +430,19 @@ export function AuthModal({ isOpen, onClose, mode, onSwitchMode, role = "patient
                   apiError.message?.includes("timeout") ||
                   apiError.message === "Request timeout") {
                 console.warn("Backend not available - user can still proceed. Onboarding page will fetch profile.")
+                // If backend is not available and mode is login, assume user exists
+                // If mode is signup, treat as new user
+                if (mode === "login") {
+                  userHasProfile = true // Assume existing user if backend unavailable
+                } else {
+                  isNewUser = true
+                }
               } else {
                 console.warn("Failed to fetch user profile:", apiError.message || apiError)
+                // If it's a 404 or similar, user doesn't exist
+                if (apiError.response?.status === 404) {
+                  isNewUser = true
+                }
               }
             }
           }
@@ -237,21 +452,39 @@ export function AuthModal({ isOpen, onClose, mode, onSwitchMode, role = "patient
         }
       }
       
-      toast.success(
-        mode === "login" 
-          ? "Signed in with Google successfully!" 
-          : "Account created with Google successfully!"
-      )
+      // Determine redirect based on mode and user status
+      let redirectPath = "/dashboard"
+      let successMessage = "Signed in with Google successfully!"
+      
+      if (mode === "signup") {
+        // Signup mode - always go to onboarding
+        redirectPath = `/onboarding?role=${role}`
+        successMessage = "Account created with Google successfully!"
+      } else if (mode === "login") {
+        // Login mode - check user status
+        if (!userHasProfile) {
+          // User doesn't exist - this shouldn't happen in login, but handle it
+          toast.error("No account found. Please sign up first.")
+          onSwitchMode("signup")
+          setGoogleLoading(false)
+          return
+        } else if (isNewUser || !userOnboardingCompleted) {
+          // User exists but hasn't completed onboarding
+          redirectPath = `/onboarding?role=${role}`
+          successMessage = "Signed in successfully! Please complete your profile."
+        } else {
+          // User exists and has completed onboarding - go to dashboard
+          redirectPath = "/dashboard"
+          successMessage = "Signed in with Google successfully!"
+        }
+      }
+      
+      toast.success(successMessage)
       
       // Small delay before redirect to ensure everything is ready
       await new Promise(resolve => setTimeout(resolve, 300))
       
-      // Check if user needs onboarding (for new signups)
-      if (mode === "signup") {
-        router.push(`/onboarding?role=${role}`)
-      } else {
-        router.push("/dashboard")
-      }
+      router.push(redirectPath)
       onClose()
     } catch (error: any) {
       console.error("Google authentication error:", error)

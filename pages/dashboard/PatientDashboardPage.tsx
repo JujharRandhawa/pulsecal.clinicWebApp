@@ -42,8 +42,8 @@ export default function PatientDashboardPage() {
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
-        <UpcomingAppointmentsCard />
-        <RecentActivityCard />
+        <UpcomingAppointmentsCard appointments={[]} />
+        <RecentActivityCard activities={[]} />
       </div>
 
       <Card className="col-span-2">
